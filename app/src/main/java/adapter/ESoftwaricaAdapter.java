@@ -36,7 +36,7 @@ public class ESoftwaricaAdapter extends RecyclerView.Adapter<ESoftwaricaAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ContactsViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ContactsViewHolder holder, final int position) {
 
         final ESoftwarica eSoftwarica=eSoftwaricaList.get(position);
         String gender=eSoftwarica.getGender();
@@ -56,6 +56,16 @@ public class ESoftwaricaAdapter extends RecyclerView.Adapter<ESoftwaricaAdapter.
         holder.txtname.setText(eSoftwarica.getName());
         holder.txtage.setText(String.valueOf(age));
         holder.txtaddress.setText(eSoftwarica.getAddress());
+        holder.img2.setImageResource(R.drawable.delete);
+
+        holder.img2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                eSoftwaricaList.remove(position);
+                notifyDataSetChanged();
+            }
+        });
+
     }
 
     @Override
@@ -66,9 +76,10 @@ public class ESoftwaricaAdapter extends RecyclerView.Adapter<ESoftwaricaAdapter.
     public  class ContactsViewHolder extends RecyclerView.ViewHolder {
 
         private TextView txtgender,txtname,txtage,txtaddress;
-        private ImageView img;
+        private ImageView img,img2;
         public ContactsViewHolder(@NonNull View itemView) {
             super(itemView);
+            img2=itemView.findViewById(R.id.imgdelete);
             img=itemView.findViewById(R.id.imageView3);
             txtgender=itemView.findViewById(R.id.txtgender);
             txtname=itemView.findViewById(R.id.txtname);

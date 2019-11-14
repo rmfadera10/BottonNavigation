@@ -78,16 +78,9 @@ int age;
                 }
 
                 ESoftwarica eSoftwarica = new ESoftwarica(name, address, age,gender);
-
                 eSoftwaricaList = eSoftwarica.getStudentList();
-
                 eSoftwaricaList.add(eSoftwarica);
-
                 eSoftwarica.setStudentList(eSoftwaricaList);
-
-
-                Toast.makeText(getActivity(), "Student Addition Successfull: " + name, Toast.LENGTH_SHORT).show();
-
 
                 etname.setText("");
                 etage.setText("");
@@ -95,11 +88,7 @@ int age;
                 rdmale.clearFocus();
                 rdfemale.clearFocus();
                 rdothers.clearFocus();
-
-
                 break;
         }
-
-
-        }
+    }
 }

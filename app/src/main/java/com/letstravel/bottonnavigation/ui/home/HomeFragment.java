@@ -34,12 +34,13 @@ public class HomeFragment extends Fragment {
 
         recyclerview = root.findViewById(R.id.recycleview);
 
+
+
         ESoftwarica eSoftwarica1 = new ESoftwarica("Raman Phadera", "Humla", 22, "Male");
         eSoftwaricaslist = eSoftwarica1.getStudentList();
 
         if(eSoftwaricaslist.isEmpty()) {
             eSoftwaricaslist.add(new ESoftwarica("Raman Phadera", "Humla", 22, "Male"));
-           // eSoftwaricaslist.add(new ESoftwarica("Raman Phadera", "Humla", 22, "Male"));
             eSoftwarica1.setStudentList(eSoftwaricaslist);
         }
         ESoftwaricaAdapter eSoftwaricaAdapter = new ESoftwaricaAdapter(getActivity(), eSoftwaricaslist);
