@@ -34,8 +34,6 @@ public class HomeFragment extends Fragment {
 
         recyclerview = root.findViewById(R.id.recycleview);
 
-
-
         ESoftwarica eSoftwarica1 = new ESoftwarica("Raman Phadera", "Humla", 22, "Male");
         eSoftwaricaslist = eSoftwarica1.getStudentList();
 
