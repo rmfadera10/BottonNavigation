@@ -22,4 +22,15 @@
         android:name="com.letstravel.bottonnavigation.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+    android:id="@+id/mobile"
+    android:name="com.letstravel.bottonnavigation.ui.mobile.Mobile"
+    android:label="@string/mobile"
+    tools:layout="@layout/mobile" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.letstravel.bottonnavigation.ui.map.MapFragment"
+        android:label="@string/map"
+        tools:layout="@layout/fragment_map" />
 </navigation>
